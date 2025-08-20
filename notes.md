@@ -1,0 +1,3 @@
+
+
+i'm creating a website for a company that does transport logistics called peneh that has the slogan your trusted partner in transport logistics, they offer the following services, airport pickups, stress free transport to and from the airport, car hire with driver for comfort and convinience, employee pickups & drop offs punctual and safe staff transportation, secure package transportation. i need this to have a why a chose us section with thw folllowing pointers that the company is safe and reliable and that they have proffessional drivers, timely services, they are customer focused and they have affordable rates

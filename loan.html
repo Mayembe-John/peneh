@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Apply for a Loan | Peneh</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Navigation Bar (copied from main page) -->
+  <nav>
+    <div class="nav-container">
+      <div class="logo-text-wrap" style="display: flex; align-items: center; gap: 1rem;">
+    <a href="index.html" class="logo">
+      <img src="images/Picsart_25-06-23_14-05-27-291.png" alt="Peneh Logo">
+    </a>
+    <h3 style="font-size: 1.5rem; color: var(--secondary); font-weight: 600; text-align: center;">PENEH</h3>
+  </div>
+      <div class="menu-toggle" id="mobile-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <ul class="nav-list">
+        <li><a href="index.html#services">Services</a></li>
+        <li><a href="index.html#why-choose-us">Why Choose Us</a></li>
+        <li><a href="index.html#loan">Loans</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Loan Application Section -->
+  <section class="section loan" style="padding-top: 120px;">
+    <div class="container">
+      <h2 class="section-title">Loan Services</h2>
+      <p class="section-subtitle">Accessible and flexible loan options designed to support your financial goals</p>
+
+      <div class="loan-content">
+        <p>
+          At Peneh, we understand that financial flexibility is key. Our Collateral Based loan offerings are designed for individuals and small businesses who need quick, trustworthy, and straightforward access to credit.
+          Whether it’s to expand your transport business, cover unexpected expenses, or take a step toward a goal—our loan services have you covered.
+        </p>
+
+
+        <h3 style="margin-top: 3rem;">Apply for a Loan</h3>
+        <form id="loanApplicationForm" class="contact-form"           style="margin-top: 2rem;">
+          <div class="form-group"> 
+            <label for="fullName">Full Name</label>
+            <input type="text" id="fullName" name="fullName" placeholder="Your Full Name" required>
+          </div>
+          <div class="form-group">
+            <label for="phoneNumber">Phone Number</label>
+            <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="Your Phone Number" required>
+          </div>
+          <div class="form-group">
+            <label for="emailAddress">Email Address (optional)</label>
+            <input type="email" id="emailAddress" name="emailAddress" placeholder="example@example.com">
+          </div>
+          <div class="form-group">
+            <label for="amount">Requested Loan Amount</label>
+            <input type="number" id="amount" name="amount" placeholder="e.g., 10000" required>
+          </div>
+          <div class="form-group">
+             <label for="collateral">Collateral Offered</label>
+             <input type="text" id="collateral" name="collateral" placeholder="e.g. Laptop, Phone or other" required>
+</div>
+          <div class="form-group">
+            <label for="duration">Repayment Period</label>
+            <select id="duration" name="duration" required>
+              <option value="">Select Duration</option>
+              <option value="1 week">1 Week</option>
+              <option value="2 weeks">2 Weeks</option>
+              <option value="3 Weeks">3 Weeks</option>
+              <option value="1 Month">1 Month</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="reason">Purpose of Loan</label>
+            <textarea id="reason" name="reason" rows="4" placeholder="Briefly explain why you need this loan..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Submit Loan Request</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="images/Picsart_25-06-23_14-05-27-291.png" alt="Peneh Logo">
+                    <p>Your Trusted Partner in Transport Logistics</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#why-choose-us">Why Choose Us</a></li>
+                        <li><a href="#loan">Loans</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h4>Contact Info</h4>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> penehinvestments@gmail.com</li>
+                        <li><i class="fas fa-phone"></i> +260 971 610 805</li>
+                        <li><i class="fas fa-phone"></i> +260 766 628 798</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Peneh Credit Investment & Services Limited. All Rights Reserved.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="https://wa.me/260972324035"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+  <!-- JS for menu toggle + form alert -->
+  <script>
+  document.getElementById('loanApplicationForm')?.addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    // Gather form values
+    const name = document.getElementById('fullName').value.trim();
+    const phone = document.getElementById('phoneNumber').value.trim();
+    const email = document.getElementById('emailAddress').value.trim();
+    const amount = document.getElementById('amount').value.trim();
+    const duration = document.getElementById('duration').value;
+    const reason = document.getElementById('reason').value.trim();
+    const collateral = document.getElementById('collateral').value.trim();
+
+    if (!name || !phone || !amount || !duration || !reason || !collateral) {
+      alert("Please fill in all required fields.");
+      return;
+    }
+
+    // Format the WhatsApp message
+   let message = "🔔 NEW LOAN APPLICATION FROM PENEH WEBSITE 🔔. ";
+message += `👤 Full Name: ${name}, `;
+message += `📞 Phone: ${phone}, `;
+if (email) message += `📧 Email: ${email}, `;
+message += `💰 Requested Amount: K${amount}, `;
+message += `🕒 Repayment Period: ${duration}, `;
+message += `📝 Purpose: ${reason}, `;
+message += `🔐 Collateral: ${collateral}. `;
+message += `📩 Please respond ASAP.`;
+
+    // WhatsApp number
+    const whatsappNumber = "260972324035";
+    const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+
+    // Open WhatsApp
+    window.open(url, '_blank');
+
+    // Optional alert or reset
+    alert("A WhatsApp message will now open. Please press 'Send' to complete your application.");
+    this.reset();
+  });
+</script>
+
+  </script>
+
+</body>
+</html>
